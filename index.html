@@ -21,16 +21,16 @@
                 <form action="login.php" method="post" autocomplete="on">
                     <div>
                         <i class="material-symbols-outlined">person</i>
-                         <input type="email" name="email" id="imail" placeholder="Seu e-mail" autocomplete="email" required>
+                         <input class="resp" type="email" name="email" id="imail" placeholder="Seu e-mail" autocomplete="email" required>
                          <label for="imail">Usuário </label>
                     </div>
                     <div>
                          <i class="material-symbols-outlined">vpn_key</i>
-                        <input type="password" name="senha" id="isenha" placeholder="Sua senha" autocomplete="current-password" required>
+                        <input class="resp" type="password" name="senha" id="isenha" placeholder="Sua senha" autocomplete="current-password" required>
                         <label for="isenha">Senha</label>
                     </div>
-                    <input type="submit" value="Enviar">
-                    <a href="esqueci.html">Esqueci a senha <i class="material-symbols-outlined">mail</i></a>
+                    <input class="enviar" type="submit" value="Enviar">
+                    <a class="enviar" href="esqueci.html">Esqueci a senha <i id="mail" class="material-symbols-outlined" >stacked_email</i></a>
                 </form>
             </div>
         </section>

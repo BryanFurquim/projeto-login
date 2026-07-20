@@ -1,107 +1,166 @@
 @charset "UTF-8";
-/*Mobile first*/
+
+/* Mobile First */
+
 *{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body,html{
-    background-color: rgba(255, 176, 5, 0.562);
-    height: 100vh;
+html, body{
     width: 100vw;
-} 
+    height: 100vh;
+    background-color: rgba(255, 176, 5, 0.562);
+}
+
 main{
     position: relative;
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
 }
+
 #login{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.89);
-    overflow: hidden;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    overflow: hidden;
+
+    width: 300px;
+    height: 530px;
+
     background-color: white;
-    width: 250px;
-    height: 500px;
     border-radius: 20px;
-    transition: width .2s, height .2s;
-    transition-time-function: ease
-}
-#login > #img{
-    display: block;
-    background: rgba(255, 176, 5, 0.562) url(imagens/foto.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    width: 250px;
-}
-h1{
-    text-align: center;
-}
-#forms {
-    display: block;
-    padding: 10px;
-   
-    
-    margin-bottom: 10px;
-}
-p{
-    font-size: 0.8em;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+
+    transition: width .3s, height .3s;
 }
 
-form div{
-    background-color: rgba(255, 176, 5, 0.884);
-    width: 100%;
+#img{
     display: block;
-    height: 40px;
-    border-radius: 5px;
-    margin: 5px 0px;
+    width: 100%;
+    height: 200px;
+
+    background: rgba(255,176,5,.562) url(imagens/foto.jpg) center center no-repeat;
+    background-size: cover;
 }
+
+#forms{
+    padding: 10px;
+}
+
+#forms h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#forms p{
+    font-size: .8em;
+    margin-bottom: 10px;
+}
+
 label{
     display: none;
 }
 
-form > input[type=submit]{
-    font-weight: bold;
-    display: block;
-    font-size: 1em;
+form > div{
+    display: flex;
+    align-items: center;
+
     width: 100%;
     height: 40px;
-    background-image: linear-gradient(to left, rgba(231, 210, 117, 0.849), rgba(252, 138, 8, 0.836)) ;
+
+    margin: 5px 0;
+
+    background-color: rgba(255,176,5,.884);
+    border: 2px solid rgba(255,176,5,.884);
+    border-radius: 5px;
+}
+
+form > div i{
+    width: 40px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.resp{
+    width: calc(100% - 40px);
+    height: 34px;
+
+    border: none;
+    border-radius: 15px;
+
+    padding: 0 10px;
+
+    background-color: rgb(243,208,163);
+}
+
+.resp:focus{
+    background-color: white;
+    outline: none;
+}
+
+form input[type=submit]{
+    display: block;
+
+    width: 100%;
+    height: 40px;
+
+    margin-top: 8px;
+
     border: none;
     border-radius: 20px;
+
     cursor: pointer;
-    color: rgba(2, 2, 2, 0.719);
-    
-}
-form > input[type=submit]:hover{
-    background-color: darkred;
-    color: rgb(252, 250, 250);
-    font-weight: bold;
-}
-form a{
-    background-color: rgb(247, 245, 245);
-    font-weight: bold;
-    margin-top: 5px;
-    display: block;
-    text-align: center;
+
     font-size: 1em;
+    font-weight: bold;
+
+    background-image: linear-gradient(to left,rgba(231,210,117,.849),rgba(252,138,8,.836));
+    color: rgba(0,0,0,.8);
+}
+
+form input[type=submit]:hover{
+    color: white;
+    background-color: darkred;
+}
+
+form a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
     width: 100%;
     height: 40px;
+
+    margin-top: 6px;;
+
+    border: 2px solid rgb(138,132,132);
     border-radius: 20px;
-    cursor: pointer;
+
+    background-color: rgb(247,245,245);
+
+    color: rgb(252,138,8);
     text-decoration: none;
-    color: rgb(252, 138, 8);
-    border: 2px solid rgb(138, 132, 132);
+    font-weight: bold;
+
+    transition: .3s;
 }
+
 form a:hover{
-    color: rgb(255, 253, 253);
-    background-image: linear-gradient(to left, rgba(255, 221, 71, 0.849), rgba(231, 108, 51, 0.863)) ;
+    color: white;
 
+    background-image: linear-gradient(
+        to left,
+        rgba(255,221,71,.849),
+        rgba(231,108,51,.863)
+    );
+}
 
+form a i{
+    font-size: 1.2em;
 }

@@ -1,40 +1,58 @@
 @charset "UTF-8";
 
-@media screen and (min-width:768px) and (max-width: 992px){
+@media screen and (min-width:768px) and (max-width:992px){
+
     body{
-        background-image: linear-gradient(to top, rgb(238, 207, 122),rgb(219, 166, 18),rgb(226, 131, 42));
+        background-image: linear-gradient(to top,rgb(238,207,122),rgb(219,166,18),rgb(226,131,42)
+        );
     }
+
     #login{
-        width: 80vw;
+        width: 90vw;
+        height: 500px;
     }
-    #login #img{
+
+    #img{
         float: left;
         width: 30%;
         height: 100%;
     }
-    #login #forms{
-        font-size: 1.2em;
-        width: 70%;
+
+    #forms{
         float: right;
+        width: 70%;
+        font-size: 1.2em;
     }
 }
-@media screen and (min-width: 992px) {
+
+
+@media screen and (min-width:992px){
+
     body{
-        background-image: linear-gradient(to top, rgb(238, 207, 122),rgb(219, 166, 18),rgb(226, 131, 42));
+        background-image: linear-gradient(
+            to top,rgb(238,207,122), rgb(219,166,18), rgb(226,131,42));
     }
 
     #login{
-        width: 990px;
+        width: 950px;
+        height: 450px;
     }
-    #login #img{
+
+    #img{
         float: right;
         width: 50%;
         height: 100%;
     }
-    #login #forms{
-        font-size: 1.5em;
+
+    #forms{
         float: left;
         width: 50%;
+        font-size: 1.2em;
+        padding: 20px;
     }
-    
+
+    #forms p{
+        font-size: .9em;
+        margin-bottom: 20px;
+    }
 }
